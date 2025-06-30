@@ -1,0 +1,1 @@
+qmk json2c -o sofle_pico/keymaps/samiuens/keymap.c samiuens.json
