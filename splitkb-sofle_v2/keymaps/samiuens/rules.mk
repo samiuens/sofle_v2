@@ -1,4 +1,1 @@
 CONVERT_TO=liatris
-
-OLED_ENABLE=yes
-RGBLIGHT_ENABLE=yes

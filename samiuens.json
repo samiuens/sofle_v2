@@ -1,6 +1,6 @@
 {
   "keyboard": "splitkb/aurora/sofle_v2/rev1",
-  "keymap": "default",
+  "keymap": "samiuens",
   "version": 1,
   "layout": "LAYOUT",
   "layers": [
@@ -192,6 +192,9 @@
     ],
     [
       "KC_NO",
+      "QK_BOOT",
+      "QK_RBT",
+      "EE_CLR",
       "KC_NO",
       "KC_NO",
       "KC_NO",
@@ -213,9 +216,6 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_CAPS",
       "RM_TOGG",
       "RM_HUEU",
       "RM_SATU",

@@ -1,14 +1,21 @@
 # Copy only the keymap to the keyboard configuration
 keymap:
     #!/bin/bash
-    cp samiuens.json splitkb-sofle_v2/keymaps/samiuens/keymap.json
+    if [ -e samiuens.c ]
+    then
+        echo "> using keymap.c"
+        cp samiuens.c splitkb-sofle_v2/keymaps/samiuens/keymap.c
+        rm -f splitkb-sofle_v2/keymaps/samiuens/keymap.json
+    else
+        echo "> using keymap.json"
+        cp samiuens.json splitkb-sofle_v2/keymaps/samiuens/keymap.json
+        rm -f splitkb-sofle_v2/keymaps/samiuens/keymap.c
+    fi
 
 # Convert the 'keymap.json' into a 'keymap.c' file
 convert:
     #!/bin/bash
-    cp samiuens.json splitkb-sofle_v2/keymaps/samiuens/keymap.json
-    qmk json2c splitkb-sofle_v2/keymaps/samiuens/keymap.json -o splitkb-sofle_v2/keymaps/samiuens/keymap.c
-    rm -r splitkb-sofle_v2/keymaps/samiuens/keymap.json
+    qmk json2c samiuens.json -o samiuens.c
 
 # Copy keyboard configuration to your configured qmk overlay dir
 copy:
