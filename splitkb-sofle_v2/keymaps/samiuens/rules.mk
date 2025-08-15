@@ -1,1 +1,2 @@
 CONVERT_TO=liatris
+SPLIT_KEYBOARD=yes
